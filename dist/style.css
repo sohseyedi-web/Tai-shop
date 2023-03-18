@@ -570,6 +570,14 @@ video {
   display: flex;
 }
 
+.hidden{
+  display: none;
+}
+
+.h-10{
+  height: 2.5rem;
+}
+
 .h-6{
   height: 1.5rem;
 }
@@ -586,12 +594,12 @@ video {
   height: 100%;
 }
 
-.h-\[90\%\]{
-  height: 90%;
-}
-
 .w-1\/3{
   width: 33.333333%;
+}
+
+.w-10{
+  width: 2.5rem;
 }
 
 .w-2\/3{
@@ -630,10 +638,6 @@ video {
   width: 100%;
 }
 
-.w-\[90\%\]{
-  width: 90%;
-}
-
 .max-w-7xl{
   max-width: 80rem;
 }
@@ -650,20 +654,16 @@ video {
   align-items: center;
 }
 
-.justify-start{
-  justify-content: flex-start;
-}
-
-.justify-end{
-  justify-content: flex-end;
-}
-
 .justify-center{
   justify-content: center;
 }
 
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
 }
 
 .justify-evenly{
@@ -729,11 +729,6 @@ video {
      object-fit: contain;
 }
 
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -756,6 +751,31 @@ video {
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .text-center{
@@ -822,13 +842,66 @@ body{
 }
 
 @media (min-width: 768px){
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
   .md\:w-\[45\%\]{
     width: 45%;
+  }
+
+  .md\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .md\:w-\[\]{
+    width: ;
+  }
+
+  .md\:w-\[75\%\]{
+    width: 75%;
+  }
+
+  .md\:justify-between{
+    justify-content: space-between;
+  }
+
+  .md\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .md\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .md\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 1024px){
   .lg\:w-\[31\%\]{
     width: 31%;
+  }
+
+  .lg\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .lg\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

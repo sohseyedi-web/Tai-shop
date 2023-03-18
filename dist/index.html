@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Tai-Shop</title>
   </head>
   <body dir="rtl">
     <!-- header  -->
     <header
       class="py-6 bg-[#202020] text-[#202020] border-b-2 border-solid border-[#fff]"
     >
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <ul class="flex items-center m-0 text-[#ffc815]">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-4"
+      >
+        <ul class="hidden items-center m-0 text-[#ffc815] md:flex">
           <li
             class="ml-7 cursor-pointer font-medium text-[1.1rem] text-[#ff1d46]"
           >
@@ -39,11 +41,27 @@
             <option class="cursor-pointer" value="highest">گران ترین</option>
           </select>
         </div>
+        <div class="text-[#ffc815] cursor-pointer md:hidden flex">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#ffc815"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="w-10 h-10"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
       </div>
     </header>
-    <!-- header  -->
+    <!-- products -->
     <section class="py-5 max-w-7xl mx-auto">
-      <form class="my-3 w-[40%] mx-auto relative">
+      <form class="my-3 lg:w-[40%] md:w-[75%] w-[95%] mx-auto relative">
         <input
           type="text"
           class="w-full p-2 rounded-lg outline-none border-none text-[#202020]"
