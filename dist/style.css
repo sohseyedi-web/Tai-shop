@@ -566,6 +566,46 @@ video {
   margin-left: 1.75rem;
 }
 
+.ml-5{
+  margin-left: 1.25rem;
+}
+
+.ml-10{
+  margin-left: 2.5rem;
+}
+
+.ml-9{
+  margin-left: 2.25rem;
+}
+
+.ml-8{
+  margin-left: 2rem;
+}
+
+.ml-6{
+  margin-left: 1.5rem;
+}
+
+.ml-\[7\.5px\]{
+  margin-left: 7.5px;
+}
+
+.ml-\[5\%\]{
+  margin-left: 5%;
+}
+
+.ml-\[4\%\]{
+  margin-left: 4%;
+}
+
+.ml-\[3\%\]{
+  margin-left: 3%;
+}
+
+.ml-\[2\%\]{
+  margin-left: 2%;
+}
+
 .block{
   display: block;
 }
