@@ -1,15 +1,19 @@
-@import url('https://v1.fontapi.ir/css/Estedad');
+@import url("https://v1.fontapi.ir/css/Estedad");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Estedad, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Estedad, sans-serif;
 }
 
-body{
-    background-color: #202020;
+body {
+  background-color: #202020;
+}
+
+.active-class {
+  @apply text-[#ff1d46] transition-all duration-200 ease-linear;
 }

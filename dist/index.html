@@ -15,19 +15,43 @@
       <div
         class="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-4"
       >
-        <ul class="hidden items-center m-0 text-[#ffc815] md:flex">
+        <ul class="hidden items-center m-0 text-[#ffc815] md:flex items">
           <li
-            class="ml-7 cursor-pointer font-medium text-[1.1rem] text-[#ff1d46]"
+            class="ml-7 cursor-pointer font-medium text-[1.1rem] active-class item"
+            data-filter="all"
           >
             همه
           </li>
-          <li class="ml-7 cursor-pointer font-medium text-[1.1rem]">
-            ساعت مردانه
+          <li
+            class="ml-7 cursor-pointer font-medium text-[1.1rem] item"
+            data-filter="blaze"
+          >
+            کت مردانه
           </li>
-          <li class="ml-7 cursor-pointer font-medium text-[1.1rem]">ساعت</li>
-          <li class="ml-7 cursor-pointer font-medium text-[1.1rem]">کفش</li>
-          <li class="ml-7 cursor-pointer font-medium text-[1.1rem]">موبایل</li>
-          <li class="ml-7 cursor-pointer font-medium text-[1.1rem]">اکسسوری</li>
+          <li
+            class="ml-7 cursor-pointer font-medium text-[1.1rem] item"
+            data-filter="watch"
+          >
+            ساعت
+          </li>
+          <li
+            class="ml-7 cursor-pointer font-medium text-[1.1rem] item"
+            data-filter="shoe"
+          >
+            کفش
+          </li>
+          <li
+            class="ml-7 cursor-pointer font-medium text-[1.1rem] item"
+            data-filter="mobile"
+          >
+            موبایل
+          </li>
+          <li
+            class="ml-7 cursor-pointer font-medium text-[1.1rem] item"
+            data-filter="acc"
+          >
+            اکسسوری
+          </li>
         </ul>
         <div class="flex items-center">
           <h6 class="ml-2 text-[#ffc815] m-0 font-medium">فیلتر براساس:</h6>
@@ -65,9 +89,11 @@
         <input
           type="text"
           class="w-full p-2 rounded-lg outline-none border-none text-[#202020]"
+          id="search"
+          placeholder="جستجو"
         />
         <button
-          class="font-medium border-none absolute left-0 top-0 h-full w-[80px] rounded-l-lg bg-[#ffc815]"
+          class="absolute top-0 left-0 h-full bg-[#ffc815] rounded-l-lg border-none font-medium px-3"
         >
           جستجو
         </button>
@@ -75,9 +101,11 @@
       <h4 class="my-5 font-medium text-white text-2xl text-center">
         لیست محصولات
       </h4>
-      <div class="flex items-center my-5 flex-wrap">
+      <div class="flex items-center my-5 flex-wrap products-box">
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1 box"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -88,8 +116,11 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#موبایل</h6>
+            <span class="hidden">mobile</span>
             <p>365/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -139,7 +170,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -150,8 +183,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#کت_مردانه</h6>
+            <span class="hidden">blaze</span>
+
             <p>665/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -201,7 +238,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -212,8 +251,11 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#کفش</h6>
+            <span class="hidden">shoe</span>
             <p>165/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -263,7 +305,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -274,8 +318,11 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#کفش</h6>
+            <span class="hidden">shoe</span>
             <p>185/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -325,7 +372,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -336,8 +385,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#موبایل</h6>
+            <span class="hidden">mobile</span>
+
             <p>600/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -387,7 +440,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -398,8 +453,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#ساعت</h6>
+            <span class="hidden">watch</span>
+
             <p>205/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -449,7 +508,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -460,8 +521,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#ساعت</h6>
+            <span class="hidden">watch</span>
+
             <p>420/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -511,7 +576,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -522,8 +589,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#کفش</h6>
+            <span class="hidden">shoe</span>
+
             <p>210/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -573,7 +644,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -584,8 +657,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#کفش</h6>
+            <span class="hidden">shoe</span>
+
             <p>145/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -635,7 +712,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -646,8 +725,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#کت_مردانه</h6>
+            <span class="hidden">blaze</span>
+
             <p>785/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -697,7 +780,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -708,8 +793,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#ساعت</h6>
+            <span class="hidden">watch</span>
+
             <p>300/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -759,7 +848,9 @@
           </div>
         </div>
         <div
-          class="lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          class="box lg:w-[31%] md:w-[45%] w-[95%] mx-auto rounded-lg shadow-lg mb-3 ml-1"
+          data-category=""
+          data-price=""
         >
           <div
             class="flex items-center justify-center w-[160px] h-[160px] rounded-full bg-white mx-auto my-5"
@@ -770,8 +861,12 @@
               alt=""
             />
           </div>
-          <div class="flex items-center text-white justify-between px-3 my-3">
+          <div
+            class="flex items-center text-white justify-between px-3 my-3 details"
+          >
             <h6 class="font-medium m-0">#کت_مردانه</h6>
+            <span class="hidden">blaze</span>
+
             <p>705/000 تومان</p>
           </div>
           <div class="flex items-center justify-between px-3 my-3">
@@ -813,7 +908,7 @@
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                    d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.1862.2566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
                   />
                 </svg>
               </div>
@@ -823,4 +918,5 @@
       </div>
     </section>
   </body>
+  <script src="app.js"></script>
 </html>
