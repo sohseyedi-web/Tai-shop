@@ -5,6 +5,8 @@ const headerItems = document.querySelectorAll(".item");
 const productItem = document.querySelectorAll(".box");
 const select = document.getElementById("select");
 const listItem = Array.from(productItem);
+const navMobile = document.querySelector(".mobile");
+const navItem = document.querySelector(".nav");
 
 let arrItem = [];
 
@@ -92,3 +94,8 @@ select.onchange = (e) => {
     sortItem(productsBox, listItem, false);
   }
 };
+
+navMobile.addEventListener("click", (e) => {
+  e.preventDefault();
+  navItem.classList.toggle("active-nav");
+});

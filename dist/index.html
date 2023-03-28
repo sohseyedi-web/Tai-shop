@@ -10,12 +10,14 @@
   <body dir="rtl">
     <!-- header  -->
     <header
-      class="py-6 bg-[#202020] text-[#202020] border-b-2 border-solid border-[#fff]"
+      class="py-6 bg-[#202020] text-[#202020] border-b-2 border-solid border-[#fff] relative"
     >
       <div
         class="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-4"
       >
-        <ul class="hidden items-center m-0 text-[#ffc815] md:flex items">
+        <ul
+          class="nav items-center m-0 text-[#ffc815] md:flex items absolute -z-10 bg-slate-900 right-0 text-center md:top-0 top-24 w-full md:static flex-col md:flex-row md:bg-transparent leading-[3] md:w-1/2 transition-all duration-200 ease-linear md:opacity-100 opacity-0"
+        >
           <li
             class="ml-7 cursor-pointer font-medium text-[1.1rem] active-class item"
             data-filter="all"
@@ -65,7 +67,7 @@
             <option class="cursor-pointer" value="highest">گران ترین</option>
           </select>
         </div>
-        <div class="text-[#ffc815] cursor-pointer md:hidden flex">
+        <div class="text-[#ffc815] cursor-pointer md:hidden flex mobile">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="#ffc815"
@@ -84,7 +86,7 @@
       </div>
     </header>
     <!-- products -->
-    <section class="py-5 max-w-7xl mx-auto">
+    <section class="py-5 max-w-7xl mx-auto z-40">
       <!-- search input -->
       <form class="my-3 lg:w-[40%] md:w-[75%] w-[95%] mx-auto relative">
         <input
