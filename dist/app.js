@@ -53,6 +53,8 @@ for (let i = 0; i < headerItems.length; i++) {
         productItem[z].style.display = "block";
       }
     }
+    navItem.classList.toggle("active-nav");
+
   });
 }
 
